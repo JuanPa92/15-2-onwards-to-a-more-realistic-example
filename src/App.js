@@ -7,7 +7,7 @@ import useHttp from "./components/hooks/use-http";
 function App() {
   const [tasks, setTasks] = useState([]);
 
-  const transformTasks = useCallback((taskObj) => {
+  const transformTasks = useCallback((taskObj, text) => {
     const loadedTasks = [];
 
     for (const taskKey in taskObj) {
